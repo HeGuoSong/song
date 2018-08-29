@@ -1,0 +1,21 @@
+ERROR [2018-08-29 20:04:55] C:\Users\heguo\workspace\ku\framework\framework\account\http.py 50 _http_request 16156 41024 
+ 	 login http request error! type: GET, url: http;//paas.blueking.com/login/accounts/is_login/, data: {'bk_token': 'c5dkGIataaghxe3mJSNZMOyFIbGfsy3znKkHk9KlYsM'} 
+Traceback (most recent call last):
+  File "C:\Users\heguo\workspace\ku\framework\framework\account\http.py", line 38, in _http_request
+    resp = requests.get(url=url, headers=headers, params=data)
+  File "C:\Python27\lib\site-packages\requests\api.py", line 67, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\site-packages\requests\api.py", line 53, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\site-packages\requests\sessions.py", line 454, in request
+    prep = self.prepare_request(req)
+  File "C:\Python27\lib\site-packages\requests\sessions.py", line 388, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python27\lib\site-packages\requests\models.py", line 293, in prepare
+    self.prepare_url(url, params)
+  File "C:\Python27\lib\site-packages\requests\models.py", line 353, in prepare_url
+    raise MissingSchema(error)
+MissingSchema: Invalid URL 'http;//paas.blueking.com/login/accounts/is_login/': No schema supplied. Perhaps you meant http://http;//paas.blueking.com/login/accounts/is_login/?
+INFO [2018-08-29 20:04:55] C:\Users\heguo\workspace\ku\framework\framework\account\accounts.py 91 verify_bk_login 16156 41024 
+ 	 验证用户登录token无效： 
+
